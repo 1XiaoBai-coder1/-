@@ -38,7 +38,7 @@ const arr = [
 //   return loop(parId)
 // }
 
-
+// 解法二 哈希 两次遍历解决O(n2)
 function toTreeHash(list){
   // 两次遍历，第一次遍历根据pid，装入hash数据结构，第二次遍历就是形成树
   const map=new Map()
