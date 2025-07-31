@@ -27,6 +27,7 @@ function myDebounce(fn,delay){
 // },1000)
 // test()
 // 节流 throttle
+
 function myThrottle(fn,delay){
     let timer=0
     const _throttle=()=>{
@@ -38,13 +39,48 @@ function myThrottle(fn,delay){
     }
     return _throttle
 }
-function print(){
-    console.log('1111');
+// 节流测试
+// function print(){
+//     console.log('1111');
     
-}
-const test=myThrottle(print,2000);
-test()
-setTimeout(()=>{
-    test()
-},1000)
-test()
+// }
+// // 只打印一次
+// const test=myThrottle(print,2000);
+// test()
+// setTimeout(()=>{
+//     test()
+// },1000)
+// test()
+
+
+// function debounce(func, delay) {
+
+//   // 这里使用了闭包，所以 timer 不会轻易被销毁
+//   let timer = null
+
+//   // 生成一个新的函数并返回
+//   return function (...args) {
+//     // 清空定时器
+//     if (timer) {
+//       clearTimeout(timer)
+//     }
+//     // 重新启动定时器
+//     timer = setTimeout(() => {
+//       func.call(this, ...args)
+//     }, delay)
+//   }
+// }
+
+// function throttle(func, delay) {
+//   let timer = null
+//   // 在 delay 时间内，最多执行一次 func
+//   return function (...args) {
+//     if (!timer) {
+//       timer = setTimeout(() => {
+//         func.call(this, ...args)
+//         // 完成一次计时，清空，待下一次触发
+//         timer = null
+//       }, delay)
+//     }
+//   }
+// }
