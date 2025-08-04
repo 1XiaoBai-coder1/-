@@ -8,7 +8,10 @@ function myInstanceof(left,right){
     }
     return true
 }
+
 // obj instanceof Object
+
+// 测试
 let arr=[]
 console.log(myInstanceof(arr,Array));
 console.log(myInstanceof(arr,Object));
